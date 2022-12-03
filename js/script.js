@@ -1,49 +1,56 @@
-console.log("Cześć!");
+{
+  const calculateResult = (amount, currency) => {
 
-let formElement = document.querySelector(".js-form");
-let currencyElement = document.querySelector(".js-currency");
-let amountElement = document.querySelector(".js-conversionAmount");
-let resultElement = document.querySelector(".js-result");
-let resetButton = document.querySelector(".js-reset");
+    const rateEUR = 4.7075;
+    const rateGBD = 5.4362;
+    const rateUSD = 4.5844;
+    const rateCHF = 4.7977;
+    const rateUAH = 0.1258;
+
+    switch (currency) {
+      case "EUR":
+        return amount / rateEUR;
+
+      case "GBD":
+        return amount / rateGBD;
+
+      case "USD":
+        return amount / rateUSD;
+
+      case "CHF":
+        return amount / rateCHF;
+
+      case "UAH":
+        return amount / rateUAH;
+    }
+  };
+
+  const init = () => {
+    const formElement = document.querySelector(".js-form");
+
+    formElement.addEventListener("submit", (event) => {
+      event.preventDefault();
 
 
-let EUR = 4.7075;
-let GBD = 5.4362;
-let USD = 4.5844;
-let CHF = 4.7977;
-let UAH = 0.1258;
+      const currencyElement = document.querySelector(".js-currency");
+      const amountElement = document.querySelector(".js-conversionAmount");
 
-formElement.addEventListener("submit", (event) => {
-  event.preventDefault();
+      const amount = +amountElement.value;
+      const currency = currencyElement.value;
 
-  let currency = currencyElement.value;
-  let amount = amountElement.value;
+      const result = calculateResult(amount, currency);
 
-  let result;
+      resultElement.innerHTML = `${amount} PLN = <strong>${result.toFixed(2)} ${currency}</strong>`;
 
-  switch (currency) {
-    case "EUR":
-      result = amount / EUR;
-      break;
-    case "GBD":
-      result = amount / GBD;
-      break;
-    case "USD":
-      result = amount / USD;
-      break;
-    case "CHF":
-      result = amount / CHF;
-      break;
-    case "UAH":
-      result = amount / UAH;
-      break;
+    });
+    
+    const resetButton = document.querySelector(".js-reset");
+    const resultElement = document.querySelector(".js-result");
+    resetButton.addEventListener("click", () => {
+      resultElement.classList.toggle("js-reset");
+      resultElement.innerText = "OTRZYMASZ";
+    });
   }
 
-  resultElement.innerHTML = `${amount} PLN = <strong>${result.toFixed(2)} ${currency}</strong>`;
-
-});
-
-resetButton.addEventListener("click", () => {
-  resultElement.classList.toggle("reset");
-  resultElement.innerText = "OTRZYMASZ";
-})
+  init();
+};
