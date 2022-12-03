@@ -1,4 +1,10 @@
 {
+  const welcome =() => {
+    console.log("Hello word :)")
+  }
+  
+  welcome();
+  
   const calculateResult = (amount, currency) => {
 
     const rateEUR = 4.7075;
@@ -27,7 +33,9 @@
 
   const init = () => {
     const formElement = document.querySelector(".js-form");
-
+    const resetButton = document.querySelector(".js-reset");
+    const resultElement = document.querySelector(".js-result");
+    
     formElement.addEventListener("submit", (event) => {
       event.preventDefault();
 
@@ -43,14 +51,12 @@
       resultElement.innerHTML = `${amount} PLN = <strong>${result.toFixed(2)} ${currency}</strong>`;
 
     });
-    
-    const resetButton = document.querySelector(".js-reset");
-    const resultElement = document.querySelector(".js-result");
-    resetButton.addEventListener("click", () => {
+    const reset = () => {
       resultElement.classList.toggle("js-reset");
       resultElement.innerText = "OTRZYMASZ";
-    });
-  }
+    };
 
+    resetButton.addEventListener("click", reset);
+  };
   init();
 };
