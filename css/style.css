@@ -13,4 +13,6 @@ html {
   margin: auto;
   padding: 50px;
   font-family: "Lato", sans-serif;
+  background-image: url("../images/20221125_093800.jpg");
+  background-position: center;
 }

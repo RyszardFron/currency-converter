@@ -1,6 +1,7 @@
 .form__fieldset {
     border: 3px solid gray;
     border-radius: 10px;
+    background-color: white;
   }
   
   .form__field:required {
