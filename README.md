@@ -9,7 +9,7 @@ This project is a simple currency calculator made as part of the Frontend Develo
 	
 ## Technologies
 Project is created with:
-* HTML5
+* HTML6
 * CSS
 * BEM
 * JavaScript
