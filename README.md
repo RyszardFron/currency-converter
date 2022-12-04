@@ -1,6 +1,7 @@
 ﻿## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
+* [Screenshots](#screenshots)
 * [Setup](#setup)
 
 ## General info
@@ -14,8 +15,11 @@ Project is created with:
 * JavaScript
 * ECMAScript
 	
+## Screenshots
+![currency calculator.gif](../currency-converter/images/currency%20calculator.gif)
+
 ## Setup
 Project launched in a web browser. The currency calculator converts the selected foreign currency into PLN at a fixed exchange rate. It requires you to select a currency and PLN value.
 
 ## Link
-https://ryszardfron.github.io/currency-converter/indeks.html
+https://ryszardfron.github.io/currency-converter/index.html
