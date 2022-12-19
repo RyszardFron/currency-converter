@@ -22,4 +22,4 @@ Project is created with:
 Project launched in a web browser. The currency calculator converts the selected foreign currency into PLN at a fixed exchange rate. It requires you to select a currency and PLN value.
 
 ## Link
-https://ryszardfron.github.io/currency-converter/index.html
+https://ryszardfron.github.io/currency-converter/
