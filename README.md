@@ -16,7 +16,7 @@ Project is created with:
 * ECMAScript
 	
 ## Demonstration
-![currency calculator.gif](images/currency calculator.gif)
+![currency_calculator.gif](images/currency_calculator.gif)
 
 ## Setup
 Project launched in a web browser. The currency calculator converts the selected foreign currency into PLN at a fixed exchange rate. It requires you to select a currency and PLN value.
