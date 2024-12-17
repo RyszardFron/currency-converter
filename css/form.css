@@ -24,6 +24,7 @@
     max-width: 250px;
     display: inline-block;
     margin: 15px;
+    padding: 10px 0;
   }
   
   .form__field {
@@ -38,6 +39,7 @@
   .form__button {
     width: 100%;
     padding: 10px;
+    margin: 10px 0;
     border: none;
     background-color: #706b6b;
     border-radius: 5px;
@@ -57,13 +59,17 @@
     margin: 30px;
     text-align: center;
   }
-  
-  .form__result--size {
-    font-size: 30px;
-    padding: 0px 30px
-  }
-  
+
   .form__info {
     font-size: 13px;
-    font-style: bold;
+    font-weight: bold;
+    margin: 10px;
   }
+
+
+
+
+
+
+
+  
