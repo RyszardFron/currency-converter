@@ -1,0 +1,6 @@
+@media (max-width: 600px) {
+    .form__label {
+        text-align: center;
+        margin: 10px;
+    }
+}
